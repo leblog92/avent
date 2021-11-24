@@ -11,7 +11,7 @@ html,body{
 body{
 	user-select:none;
 	overflow:hidden;
-	background:linear-gradient(135deg,#000,#35b);
+	background:linear-gradient(135deg,#000,#35b,indigo);
 }
 #svg_avent{
 	width:100%;
@@ -28,6 +28,9 @@ body{
 	alignment-baseline:middle;
 	text-anchor:middle;
 	fill:#ce906b;
+}
+#g_1,#g_2{
+	transition:1s;
 }
 </style>
 </head>
@@ -68,15 +71,15 @@ var d=new Date();
 var month=d.getMonth();
 var day=d.getUTCDate();
 function too_soon(){alert("Too soon !")};
-function check_1(){if(month==10&&day>=1){ document.getElementById("g_1").style.display="none"; new Audio("open.mp3").play();}else{too_soon();}}
-function check_2(){if(month==10&&day>=2){ document.getElementById("g_2").style.display="none"; new Audio("open.mp3").play();}else{too_soon();}}
-function check_3(){if(month==10&&day>=3){ document.getElementById("g_3").style.display="none"; new Audio("open.mp3").play();}else{too_soon();}}
-function check_4(){if(month==10&&day>=4){ document.getElementById("g_4").style.display="none"; new Audio("open.mp3").play();}else{too_soon();}}
-function check_5(){if(month==10&&day>=5){ document.getElementById("g_5").style.display="none"; new Audio("open.mp3").play();}else{too_soon();}}
-function check_6(){if(month==10&&day>=6){ document.getElementById("g_6").style.display="none"; new Audio("open.mp3").play();}else{too_soon();}}
-function check_7(){if(month==10&&day>=7){ document.getElementById("g_7").style.display="none"; new Audio("open.mp3").play();}else{too_soon();}}
-function check_8(){if(month==10&&day>=8){ document.getElementById("g_8").style.display="none"; new Audio("open.mp3").play();}else{too_soon();}}
-function check_9(){if(month==10&&day>=9){ document.getElementById("g_9").style.display="none"; new Audio("open.mp3").play();}else{too_soon();}}
+function check_1(){if(month==10&&day>=1){document.getElementById("g_1").style.opacity=0;setTimeout(function(){document.getElementById("g_1").style.display="none";},1000);new Audio("open.mp3").play();}else{too_soon();}}
+function check_2(){if(month==10&&day>=2){document.getElementById("g_2").style.display="none";new Audio("open.mp3").play();}else{too_soon();}}
+function check_3(){if(month==10&&day>=3){document.getElementById("g_3").style.display="none";new Audio("open.mp3").play();}else{too_soon();}}
+function check_4(){if(month==10&&day>=4){document.getElementById("g_4").style.display="none";new Audio("open.mp3").play();}else{too_soon();}}
+function check_5(){if(month==10&&day>=5){document.getElementById("g_5").style.display="none";new Audio("open.mp3").play();}else{too_soon();}}
+function check_6(){if(month==10&&day>=6){document.getElementById("g_6").style.display="none";new Audio("open.mp3").play();}else{too_soon();}}
+function check_7(){if(month==10&&day>=7){document.getElementById("g_7").style.display="none";new Audio("open.mp3").play();}else{too_soon();}}
+function check_8(){if(month==10&&day>=8){document.getElementById("g_8").style.display="none";new Audio("open.mp3").play();}else{too_soon();}}
+function check_9(){if(month==10&&day>=9){document.getElementById("g_9").style.display="none";new Audio("open.mp3").play();}else{too_soon();}}
 function check_10(){if(month==10&&day>=10){document.getElementById("g_10").style.display="none";new Audio("open.mp3").play();}else{too_soon();}}
 function check_11(){if(month==10&&day>=11){document.getElementById("g_11").style.display="none";new Audio("open.mp3").play();}else{too_soon();}}
 function check_12(){if(month==10&&day>=12){document.getElementById("g_12").style.display="none";new Audio("open.mp3").play();}else{too_soon();}}
