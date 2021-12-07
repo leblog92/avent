@@ -1,11 +1,48 @@
 <!doctype html>
 <html lang="fr">
-<head>
-</head>
-  <body>
-    <a href="https://leblog92.github.io/avent/ah/" target="_blank">AH</a>
-    <a href="https://leblog92.github.io/avent/cg/" target="_blank">CG</a>
-    <a href="https://leblog92.github.io/avent/nj/" target="_blank">NJ</a>
-    <a href="https://leblog92.github.io/avent/zc/" target="_blank">ZC</a>  
-  </body>
+	<head>
+		<meta charset="utf-8">
+		<title>Avent Selector</title>
+		<style>
+			html,body{
+			height:100%;
+			margin:0;
+			}
+			body{
+			font-family:sans-serif;
+			font-size:20px;
+			}
+			.container { 
+				height:100%;
+				position: relative;
+			}
+			.vertical-center{
+				margin:0;
+				position:absolute;
+				top:50%;
+				left:50%;
+				-ms-transform:translateY(-50%);
+				transform:translateY(-50%);
+				-ms-transform:translateX(-50%);
+				transform:translateX(-50%);
+			}
+			a{
+				background-color:royalblue;
+				padding:20px;
+				border-radius:50%;
+				color:#fff;
+				box-shadow:5px 5px 5px rgba(0,0,0,0.25)
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div class="vertical-center">
+				<span class="sel"><a href="https://leblog92.github.io/avent/ah/" target="_blank">AH</a></span>
+				<span class="sel"><a href="https://leblog92.github.io/avent/cg/" target="_blank">CG</a></span>
+				<span class="sel"><a href="https://leblog92.github.io/avent/nj/" target="_blank">NJ</a></span>
+				<span class="sel"><a href="https://leblog92.github.io/avent/zc/" target="_blank">ZC</a></span>
+			</div>
+		</div>
+	</body>
 </html>
