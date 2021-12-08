@@ -46,9 +46,16 @@ body{
 #g_1,#g_2,#g_3,#g_4,#g_5,#g_6,#g_7,#g_8,#g_9,#g_10,#g_11,#g_12,#g_13,#g_14,#g_15,#g_16,#g_17,#g_18,#g_19,#g_20,#g_21,#g_22,#g_23,#g_24,#g_25{
 	transition:1s;
 }
+#kb{
+position:fixed;
+top:0;
+left:-100px;
+z-index:-1000;
+}
 </style>
 </head>
 <body>
+<image src="kirby.gif" width="100px" height="100px" id="kb"/>
 <svg id="svg_avent" viewBox="0 0 100 100">
 <rect fill="#e8bb9a" width="100" height="100" x="0" y="0"/>
 <g transform="translate(1 1)">
@@ -84,6 +91,21 @@ body{
 var d=new Date();
 var month=d.getMonth();
 var day=d.getUTCDate();
+var ww=window.innerWidth;
+var wh=window.innerHeight;
+var kb=document.getElementById("kb");
+var x=0;
+var y=Math.round(Math.random()*wh)-200;
+function fly(){
+	x++;
+	kb.style.left=x+"px";
+	kb.style.top=y+"px";
+	if(x>=ww){
+		y=Math.round(Math.random()*wh)-200;
+		x=-100;
+	}
+}
+setInterval(fly,5);
 function too_soon(){new Audio("../sounds/jing.mp3").play();setTimeout(function(){alert("Too soon !");},300);}
 function open(a){
 	document.getElementById(a).style.opacity=0;
