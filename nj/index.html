@@ -76,6 +76,7 @@ body{
 var d=new Date();
 var month=d.getMonth();
 var day=d.getUTCDate();
+var year=d.getFullYear();
 function too_soon(){new Audio("../sounds/jing.mp3").play();setTimeout(function(){alert("Too soon !");},300);}
 function roar(){new Audio("roar.mp3").play();}
 function open(a){
@@ -84,31 +85,31 @@ function open(a){
 	setTimeout(function(){document.getElementById(a).style.display="none";},1000);
 	new Audio("../sounds/open.mp3").play();
 }
-function check_1(){if(month==11&&day>=1){open("g_1");}else{too_soon();}}
-function check_2(){if(month==11&&day>=2){open("g_2");}else{too_soon();}}
-function check_3(){if(month==11&&day>=3){open("g_3");}else{too_soon();}}
-function check_4(){if(month==11&&day>=4){open("g_4");}else{too_soon();}}
-function check_5(){if(month==11&&day>=5){open("g_5");}else{too_soon();}}
-function check_6(){if(month==11&&day>=6){open("g_6");}else{too_soon();}}
-function check_7(){if(month==11&&day>=7){open("g_7");}else{too_soon();}}
-function check_8(){if(month==11&&day>=8){open("g_8");}else{too_soon();}}
-function check_9(){if(month==11&&day>=9){open("g_9");}else{too_soon();}}
-function check_10(){if(month==11&&day>=10){open("g_10");}else{too_soon();}}
-function check_11(){if(month==11&&day>=11){open("g_11");}else{too_soon();}}
-function check_12(){if(month==11&&day>=12){open("g_12");}else{too_soon();}}
-function check_13(){if(month==11&&day>=13){open("g_13");}else{too_soon();}}
-function check_14(){if(month==11&&day>=14){open("g_14");}else{too_soon();}}
-function check_15(){if(month==11&&day>=15){open("g_15");}else{too_soon();}}
-function check_16(){if(month==11&&day>=16){open("g_16");}else{too_soon();}}
-function check_17(){if(month==11&&day>=17){open("g_17");}else{too_soon();}}
-function check_18(){if(month==11&&day>=18){open("g_18");}else{too_soon();}}
-function check_19(){if(month==11&&day>=19){open("g_19");}else{too_soon();}}
-function check_20(){if(month==11&&day>=20){open("g_20");}else{too_soon();}}
-function check_21(){if(month==11&&day>=21){open("g_21");}else{too_soon();}}
-function check_22(){if(month==11&&day>=22){open("g_22");}else{too_soon();}}
-function check_23(){if(month==11&&day>=23){open("g_23");}else{too_soon();}}
-function check_24(){if(month==11&&day>=24){open("g_24");}else{too_soon();}}
-function check_25(){if(month==11&&day>=25){open("g_25");}else{too_soon();}}
+function check_1(){if(year==2022||month==11&&day>=1){open("g_1");}else{too_soon();}}
+function check_2(){if(year==2022||month==11&&day>=2){open("g_2");}else{too_soon();}}
+function check_3(){if(year==2022||month==11&&day>=3){open("g_3");}else{too_soon();}}
+function check_4(){if(year==2022||month==11&&day>=4){open("g_4");}else{too_soon();}}
+function check_5(){if(year==2022||month==11&&day>=5){open("g_5");}else{too_soon();}}
+function check_6(){if(year==2022||month==11&&day>=6){open("g_6");}else{too_soon();}}
+function check_7(){if(year==2022||month==11&&day>=7){open("g_7");}else{too_soon();}}
+function check_8(){if(year==2022||month==11&&day>=8){open("g_8");}else{too_soon();}}
+function check_9(){if(year==2022||month==11&&day>=9){open("g_9");}else{too_soon();}}
+function check_10(){if(year==2022||month==11&&day>=10){open("g_10");}else{too_soon();}}
+function check_11(){if(year==2022||month==11&&day>=11){open("g_11");}else{too_soon();}}
+function check_12(){if(year==2022||month==11&&day>=12){open("g_12");}else{too_soon();}}
+function check_13(){if(year==2022||month==11&&day>=13){open("g_13");}else{too_soon();}}
+function check_14(){if(year==2022||month==11&&day>=14){open("g_14");}else{too_soon();}}
+function check_15(){if(year==2022||month==11&&day>=15){open("g_15");}else{too_soon();}}
+function check_16(){if(year==2022||month==11&&day>=16){open("g_16");}else{too_soon();}}
+function check_17(){if(year==2022||month==11&&day>=17){open("g_17");}else{too_soon();}}
+function check_18(){if(year==2022||month==11&&day>=18){open("g_18");}else{too_soon();}}
+function check_19(){if(year==2022||month==11&&day>=19){open("g_19");}else{too_soon();}}
+function check_20(){if(year==2022||month==11&&day>=20){open("g_20");}else{too_soon();}}
+function check_21(){if(year==2022||month==11&&day>=21){open("g_21");}else{too_soon();}}
+function check_22(){if(year==2022||month==11&&day>=22){open("g_22");}else{too_soon();}}
+function check_23(){if(year==2022||month==11&&day>=23){open("g_23");}else{too_soon();}}
+function check_24(){if(year==2022||month==11&&day>=24){open("g_24");}else{too_soon();}}
+function check_25(){if(year==2022||month==11&&day>=25){open("g_25");}else{too_soon();}}
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
