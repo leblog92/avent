@@ -52,9 +52,7 @@
 				075%{transform:translateY(0.5px);}
 				100%{transform:translateY(0px);}
 			}
-			#g_1,#g_2,#g_3,#g_4,#g_5,#g_6,#g_7,#g_8,#g_9,#g_10,#g_11,#g_12,#g_13,#g_14,#g_15,#g_16,#g_17,#g_18,#g_19,#g_20,#g_21,#g_22,#g_23,#g_24,#g_25{
-				transition:1s;
-			}
+			#g_1,#g_2,#g_3,#g_4,#g_5,#g_6,#g_7,#g_8,#g_9,#g_10,#g_11,#g_12,#g_13,#g_14,#g_15,#g_16,#g_17,#g_18,#g_19,#g_20,#g_21,#g_22,#g_23,#g_24,#g_25{transition:1s;}
 			#snowy_bottom{
 				position:fixed;
 				bottom:0px;
@@ -125,9 +123,9 @@
 		var j=1;
 
 		while(j<=25){
-		k=Math.floor(Math.random()*x.length);
-		there.innerHTML+='<g transform="translate('+x[k]+' '+y[k]+')"><image xlink:href="https://leblog92.github.io/avent/pictures/empty.png" width="18" height="18"/><a href="'+link[(j-1)]+'" target="_blank"><image class="prize'+Math.round(Math.random())+'" xlink:href="'+pic[(j-1)]+'.png" width="18" height="18"/></a><g onclick="check_'+j+'()" id="g_'+j+'"><rect class="jours" width="18" height="18"/><text class="t_jour" x="09" y="10">'+j+'</text></g></g>';
-		x.splice(k, 1);y.splice(k, 1);j++;
+			k=Math.floor(Math.random()*x.length);
+			there.innerHTML+='<g transform="translate('+x[k]+' '+y[k]+')"><image xlink:href="https://leblog92.github.io/avent/pictures/empty.png" width="18" height="18"/><a href="'+link[(j-1)]+'" target="_blank"><image class="prize'+Math.round(Math.random())+'" xlink:href="'+pic[(j-1)]+'.png" width="18" height="18"/></a><g onclick="check_'+j+'()" id="g_'+j+'"><rect class="jours" width="18" height="18"/><text class="t_jour" x="09" y="10">'+j+'</text></g></g>';
+			x.splice(k, 1);y.splice(k, 1);j++;
 		}
 
 		function show(){
@@ -160,7 +158,16 @@
 			new Audio("https://leblog92.github.io/avent/sounds/open.mp3").play();
 		}
 
-		document.body.addEventListener("keypress", activate(e));function activate(){if(e==cheat=true;}
+		document.body.addEventListener("keypress", function(event){
+			if((event.key=="k")&&(cheat==false)){
+				cheat=true;
+				console.log("cheat mode is on");
+			}else{
+				cheat=false;
+				console.log("cheat mode is off");
+			}
+		})
+
 		function check_1(){if(cheat==true||year==2023&&month==11&&day>=1){open("g_1");}else{too_soon();}}
 		function check_2(){if(cheat==true||year==2023&&month==11&&day>=2){open("g_2");}else{too_soon();}}
 		function check_3(){if(cheat==true||year==2023&&month==11&&day>=3){open("g_3");}else{too_soon();}}
