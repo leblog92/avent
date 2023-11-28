@@ -160,8 +160,7 @@
 			new Audio("https://leblog92.github.io/avent/sounds/open.mp3").play();
 		}
 
-		document.body.addEventListener("keypress", activate);function activate(){cheat=true;}
-
+		document.body.addEventListener("keypress", activate(e));function activate(){if(e==cheat=true;}
 		function check_1(){if(cheat==true||year==2023&&month==11&&day>=1){open("g_1");}else{too_soon();}}
 		function check_2(){if(cheat==true||year==2023&&month==11&&day>=2){open("g_2");}else{too_soon();}}
 		function check_3(){if(cheat==true||year==2023&&month==11&&day>=3){open("g_3");}else{too_soon();}}
