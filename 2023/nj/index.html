@@ -114,9 +114,7 @@
 		var day=d.getUTCDate();
 		var month=d.getMonth();
 		var year=d.getFullYear();
-		
-		console.log(day+" "+month+" "+year);
-		
+		var cheat=false;
 		var see=false;
 		var x=[0,20,40,60,80,0,20,40,60,80,0,20,40,60,80,0,20,40,60,80,0,20,40,60,80];
 		var y=[0,0,0,0,0,20,20,20,20,20,40,40,40,40,40,60,60,60,60,60,80,80,80,80,80];
@@ -125,7 +123,7 @@
 		var link=["https://www.youtube.com/watch?v=C2lMOj2z_4U","https://ravernt.itch.io/folder-dungeon","https://www.youtube.com/watch?v=ZQh7yPdkpaw","https://steamcommunity.com/sharedfiles/filedetails/?id=3069612400&searchtext=sugoroku","https://humpheh.com/magic/c/","https://robots.management/","https://movie-web.app/media/tmdb-movie-698201","https://www.hanafuda.online/","https://greggjewell.itch.io/galdors-grip","https://getcomics.org/other-comics/hellboy-beasts-of-burden-sacrifice-2010/","https://gatherer.wizards.com/pages/card/Details.aspx?multiverseid=414405","https://www.youtube.com/watch?v=VxZ1U9PdUR8","https://teambeanloop.itch.io/six-cats-under","https://drive.google.com/file/d/1MCdl-ffhhtpD0HCg-qxTnE_jR0C80FvX/view?usp=sharing","https://www.youtube.com/watch?app=desktop&v=kiL216RYq_4","https://draftsim.com/green-black-commanders-mtg/","https://pixel-bubble.itch.io/scatterhoard","https://wwwwwwwww.jodi.org/","https://www.artstation.com/artwork/n0JElX","https://www.youtube.com/@bannedfromearth9819/videos","https://celiahodent.com/fr/","https://escada-games.itch.io/pigeon-ascent","https://movie-web.app/media/tmdb-movie-20646","https://playclassic.games/games/role-playing-rpg-snes-games-online/play-super-mario-rpg-legend-of-the-seven-stars-online/play/","https://drive.google.com/file/d/1rVxKjG34JdtSyGIKOkDpPpFbY5i95aYF/view?usp=drive_link"];
 		var there=document.getElementById("there");
 		var j=1;
-		
+
 		while(j<=25){
 		k=Math.floor(Math.random()*x.length);
 		there.innerHTML+='<g transform="translate('+x[k]+' '+y[k]+')"><image xlink:href="https://leblog92.github.io/avent/pictures/empty.png" width="18" height="18"/><a href="'+link[(j-1)]+'" target="_blank"><image class="prize'+Math.round(Math.random())+'" xlink:href="'+pic[(j-1)]+'.png" width="18" height="18"/></a><g onclick="check_'+j+'()" id="g_'+j+'"><rect class="jours" width="18" height="18"/><text class="t_jour" x="09" y="10">'+j+'</text></g></g>';
@@ -162,31 +160,33 @@
 			new Audio("https://leblog92.github.io/avent/sounds/open.mp3").play();
 		}
 
-		function check_1(){if(year==2023&&month==11&&day>=1){open("g_1");}else{too_soon();}}
-		function check_2(){if(year==2023&&month==11&&day>=2){open("g_2");}else{too_soon();}}
-		function check_3(){if(year==2023&&month==11&&day>=3){open("g_3");}else{too_soon();}}
-		function check_4(){if(year==2023&&month==11&&day>=4){open("g_4");}else{too_soon();}}
-		function check_5(){if(year==2023&&month==11&&day>=5){open("g_5");}else{too_soon();}}
-		function check_6(){if(year==2023&&month==11&&day>=6){open("g_6");}else{too_soon();}}
-		function check_7(){if(year==2023&&month==11&&day>=7){open("g_7");}else{too_soon();}}
-		function check_8(){if(year==2023&&month==11&&day>=8){open("g_8");}else{too_soon();}}
-		function check_9(){if(year==2023&&month==11&&day>=9){open("g_9");}else{too_soon();}}
-		function check_10(){if(year==2023&&month==11&&day>=10){open("g_10");}else{too_soon();}}
-		function check_11(){if(year==2023&&month==11&&day>=11){open("g_11");}else{too_soon();}}
-		function check_12(){if(year==2023&&month==11&&day>=12){open("g_12");}else{too_soon();}}
-		function check_13(){if(year==2023&&month==11&&day>=13){open("g_13");}else{too_soon();}}
-		function check_14(){if(year==2023&&month==11&&day>=14){open("g_14");}else{too_soon();}}
-		function check_15(){if(year==2023&&month==11&&day>=15){open("g_15");}else{too_soon();}}
-		function check_16(){if(year==2023&&month==11&&day>=16){open("g_16");}else{too_soon();}}
-		function check_17(){if(year==2023&&month==11&&day>=17){open("g_17");}else{too_soon();}}
-		function check_18(){if(year==2023&&month==11&&day>=18){open("g_18");}else{too_soon();}}
-		function check_19(){if(year==2023&&month==11&&day>=19){open("g_19");}else{too_soon();}}
-		function check_20(){if(year==2023&&month==11&&day>=20){open("g_20");}else{too_soon();}}
-		function check_21(){if(year==2023&&month==11&&day>=21){open("g_21");}else{too_soon();}}
-		function check_22(){if(year==2023&&month==11&&day>=22){open("g_22");}else{too_soon();}}
-		function check_23(){if(year==2023&&month==11&&day>=23){open("g_23");}else{too_soon();}}
-		function check_24(){if(year==2023&&month==11&&day>=24){open("g_24");}else{too_soon();}}
-		function check_25(){if(year==2023&&month==11&&day>=25){open("g_25");}else{too_soon();}}
+		document.body.addEventListener("keypress", activate);function activate(){cheat=true;}
+
+		function check_1(){if(cheat==true||year==2023&&month==11&&day>=1){open("g_1");}else{too_soon();}}
+		function check_2(){if(cheat==true||year==2023&&month==11&&day>=2){open("g_2");}else{too_soon();}}
+		function check_3(){if(cheat==true||year==2023&&month==11&&day>=3){open("g_3");}else{too_soon();}}
+		function check_4(){if(cheat==true||year==2023&&month==11&&day>=4){open("g_4");}else{too_soon();}}
+		function check_5(){if(cheat==true||year==2023&&month==11&&day>=5){open("g_5");}else{too_soon();}}
+		function check_6(){if(cheat==true||year==2023&&month==11&&day>=6){open("g_6");}else{too_soon();}}
+		function check_7(){if(cheat==true||year==2023&&month==11&&day>=7){open("g_7");}else{too_soon();}}
+		function check_8(){if(cheat==true||year==2023&&month==11&&day>=8){open("g_8");}else{too_soon();}}
+		function check_9(){if(cheat==true||year==2023&&month==11&&day>=9){open("g_9");}else{too_soon();}}
+		function check_10(){if(cheat==true||year==2023&&month==11&&day>=10){open("g_10");}else{too_soon();}}
+		function check_11(){if(cheat==true||year==2023&&month==11&&day>=11){open("g_11");}else{too_soon();}}
+		function check_12(){if(cheat==true||year==2023&&month==11&&day>=12){open("g_12");}else{too_soon();}}
+		function check_13(){if(cheat==true||year==2023&&month==11&&day>=13){open("g_13");}else{too_soon();}}
+		function check_14(){if(cheat==true||year==2023&&month==11&&day>=14){open("g_14");}else{too_soon();}}
+		function check_15(){if(cheat==true||year==2023&&month==11&&day>=15){open("g_15");}else{too_soon();}}
+		function check_16(){if(cheat==true||year==2023&&month==11&&day>=16){open("g_16");}else{too_soon();}}
+		function check_17(){if(cheat==true||year==2023&&month==11&&day>=17){open("g_17");}else{too_soon();}}
+		function check_18(){if(cheat==true||year==2023&&month==11&&day>=18){open("g_18");}else{too_soon();}}
+		function check_19(){if(cheat==true||year==2023&&month==11&&day>=19){open("g_19");}else{too_soon();}}
+		function check_20(){if(cheat==true||year==2023&&month==11&&day>=20){open("g_20");}else{too_soon();}}
+		function check_21(){if(cheat==true||year==2023&&month==11&&day>=21){open("g_21");}else{too_soon();}}
+		function check_22(){if(cheat==true||year==2023&&month==11&&day>=22){open("g_22");}else{too_soon();}}
+		function check_23(){if(cheat==true||year==2023&&month==11&&day>=23){open("g_23");}else{too_soon();}}
+		function check_24(){if(cheat==true||year==2023&&month==11&&day>=24){open("g_24");}else{too_soon();}}
+		function check_25(){if(cheat==true||year==2023&&month==11&&day>=25){open("g_25");}else{too_soon();}}
 	</script>
 </body>
 </html>
