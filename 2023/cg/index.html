@@ -79,13 +79,21 @@
 			#music,#show_music{
 				transition:1s;
 			}
+			#avatar{
+				position:fixed;
+				width:500px;
+				bottom:-500px;
+				left:0;
+				transition:1s;
+			}
 		</style>
 	</head>
 	<body>
 		<iframe id="shader" frameborder="0" src="https://www.shadertoy.com/embed/4ltSRS?gui=false&t=10&paused=false&muted=false" allowfullscreen></iframe>
 		<div id="snowy_bottom">&nbsp;</div>
-		<iframe id="music" width="250" height="250" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/953231962&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"></iframe>
+		<iframe id="music" width="250" height="250" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/946757296&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"></iframe>
 		<div id="show_music" onclick="show()">🎵</div>
+		<img id="avatar" src="avatar.png"/>
 		<svg id="svg_avent" viewBox="0 0 100 100">
 			<rect fill="#e8bb9a" width="100" height="100" x="0" y="0"/>
 			<g id="there" transform="translate(1 1)"></g>
@@ -105,11 +113,9 @@
 			var link=["https://racinesvoyages.com/genealogie-et-intelligence-artificielle-un-nouveau-pas-dans-lamelioration-des-usages/","https://www.youtube.com/watch?v=zpLtgcSG08s","https://www.sciencedirect.com/book/9780240806884/if-its-purple-someones-gonna-die","https://tapas.io/episode/2289651","https://www.nikonsmallworld.com/galleries/2023-photomicrography-competition","https://www.excel-exercice.com/test-excel-niveau-expert/","https://www.flickr.com/groups/mushroom-beauty/pool/","https://chromewebstore.google.com/detail/shades-of-purple-chrome-t/ljeonhoonibcofjepiphcekbihoiaife","https://www.bibliotheque.toulouse.fr/24h-24/jeux-escape-games/","https://www.tresoraparis.fr/online/enigmes","https://www.crazygames.fr/jeu/escape-or-die","https://twitter.com/gunsnrosesgirl3/status/1728321151338725724","https://leventreetloreille.com/la-nourriture-et-le-studio-ghibli/","https://www.atlasobscura.com/search?q=library&kind=keyword","https://lumimodern.co/products/cute-dog-ornaments","","","","","","","","","","https://drive.google.com/file/d/1sFCwAk7bGIv_iqmxv4sCmdKisEUnr3mA/view?usp=sharing"];
 			var there=document.getElementById("there");
 			var j=1;
-
 			/*
 			for(var i=0;i<x.length;i++){there.innerHTML+=('<g transform="translate('+x[i]+' '+y[i]+')"><image xlink:href="https://leblog92.github.io/avent/pictures/empty.png" width="18" height="18"/><a href="#" target="_blank"><image class="prize" xlink:href="https://leblog92.github.io/avent/pictures/zero.png" width="18" height="18"/></a><g onclick="check_'+(i+1)+'()"  id="g_'+(i+1)+'"><rect class="jours" width="18" height="18"/><text class="t_jour" x="09" y="10">'+numj[i]+'</text></g></g>');}
 			*/
-
 			while(j<=25){
 				k=Math.floor(Math.random()*x.length);
 				there.innerHTML+=('<g transform="translate('+x[k]+' '+y[k]+')"><image xlink:href="https://leblog92.github.io/avent/pictures/empty.png" width="18" height="18"/><a href="'+link[(j-1)]+'" target="_blank"><image class="prize" xlink:href="'+pic[(j-1)]+'.png" width="18" height="18"/></a><g onclick="check_'+j+'()"  id="g_'+j+'"><rect class="jours" width="18" height="18"/><text class="t_jour" x="09" y="10">'+j+'</text></g></g>');
@@ -119,15 +125,17 @@
 			}
 
 			function show(){
-				if(see==false){
+			if(see==false){
 					document.getElementById("show_music").style.bottom="250px";
 					document.getElementById("show_music").style.right="0";
 					document.getElementById("music").style.bottom="0";
+					document.getElementById("avatar").style.bottom=0;
 					see=true;
 				}else{
 					document.getElementById("show_music").style.bottom="0";
 					document.getElementById("show_music").style.right="220px";
 					document.getElementById("music").style.bottom="-250px";
+					document.getElementById("avatar").style.bottom="-500px";
 					see=false;
 				}
 			}
@@ -181,7 +189,6 @@
 			function check_23(){if(cheat==true||year==2023&&month==11&&day>=23){open("g_23");}else{too_soon();}}
 			function check_24(){if(cheat==true||year==2023&&month==11&&day>=24){open("g_24");}else{too_soon();}}
 			function check_25(){if(cheat==true||year==2023&&month==11&&day>=25){open("g_25");}else{too_soon();}}
-
 		</script>
 	</body>
 </html>
