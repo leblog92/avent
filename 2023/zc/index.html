@@ -150,7 +150,11 @@
 			function too_soon(b){
 				new Audio("https://leblog92.github.io/avent/sounds/jing.mp3").play();
 				setTimeout(function(){
-					alert("Too soon !");
+					if(b==1){
+						alert("Trop tôt, nous ne somme pas le 1er décembre !");
+					}else{
+						alert("Trop tôt, nous ne somme pas le "+b+" décembre !");
+					}
 				},300);
 			}
 
