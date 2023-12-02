@@ -13,7 +13,8 @@ html,body{
 body{
 	text-align:center;
 	color:#fff;
-	background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(169,43,217,1) 75%, rgba(170,124,247,1) 100%);
+	background:#000;
+	//background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(169,43,217,1) 75%, rgba(170,124,247,1) 100%);
 	font-family:sans-serif;
 	user-select:none;
 }
@@ -32,9 +33,9 @@ span{
 </style>
 </head>
 <body>
-<h1>B.F.F.C. (Back Fitness For Chloé)</h1>
+<!-- <h1>BFFC : Back Fitness For Chloé</h1> -->
 <div id="div1"></div><br>
-<span id="less">◀&nbsp;Previous&nbsp;video</span><span id="current">1/111</span><span id="more">Next&nbsp;video&nbsp;▶</span>
+<span id="less">◀ Previous video</span><span id="current">1/111</span><span id="more">Next video ▶</span>
 <script>
 var div1=document.getElementById("div1");
 var less=document.getElementById("less");
@@ -53,20 +54,22 @@ more.addEventListener("click",fun_more);
 less.addEventListener("click",fun_less);
 
 	function fun_more(){
-		if(i>1){less.style.opacity=1;}
 		if(i<(vids.length-1)){
 			i++;
+			if(i>1){less.style.opacity=1;}
+			if(i==(vids.length-1)){more.style.opacity=0.5;}
 			dispvid(i);
 			curr.innerHTML=i+"/"+(vids.length-1);
 		}else{
-			more.style.opacity=0.5;
+
 		}
 	}
 	
 	function fun_less(){
-		if(i<111){more.style.opacity=1;}
 		if(i>1){
 			i--;
+			if(i<(vids.length-1)){more.style.opacity=1;}
+			if(i==1){less.style.opacity=0.5;}
 			dispvid(i);
 			curr.innerHTML=i+"/"+(vids.length-1);
 		}else{
