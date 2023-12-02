@@ -1,6 +1,10 @@
 <!doctype html>
-<html>
+<html lang="fr">
+<meta charset="utf-8">
+<title>BFFC</title>
+<link rel="icon" type="image/png" href="favicon.png" />
 <head>
+
 <style>
 html,body{
 	height:100%;
@@ -16,14 +20,18 @@ body{
 	margin-left:100px;
 	margin-right:100px;
 }
-#less{
+span{
 	border-radius:10px;
-	background:#333;
+	background:#222;
+	padding:10px;
+}
+#less{
+opacity:0.5;
 }
 </style>
 </head>
 <body>
-<h1>BFFC Back Fitness For Chloé</h1>
+<h1>BFFC : Back Fitness For Chloé</h1>
 <div id="div1"></div><br>
 <span id="less">◀ Previous video</span><span id="current">1/111</span><span id="more">Next video ▶</span>
 <script>
@@ -34,7 +42,7 @@ var vids=["1698008256894124407_1.mp4","1699419869475643778_1.mp4","1700155399389
 var i=0;
 function dispvid(i){div1.innerHTML='<video style="height:600px;" controls autoplay><source src="'+vids[i]+'"></video>'};
 dispvid(0);
-//document.addEventListener
+document.addEventListener
 </script>
 </body>
 </html>
